@@ -1,0 +1,21 @@
+<%- include('partials/header'); %>
+
+<div>
+    <h1><%= titleOfThePost%></h1>
+<% for(var i=0; i< content.length; i++) {%>
+    <p><%= content[i] %></p>
+<% } %>
+</div>
+
+<div class="postPage">
+    <form action="/posts/editPost/<%= id %>" method="get">
+        <button type="submit" name="idOfpost" class="update" value="<%= id %>">Update post</button>
+    </form>
+    
+    <form action="/posts/<%= id %>" method="post">
+        <button type="submit" name="idOfpost" class="delete" value="<%= id %>">Delete post</button>
+    </form>
+</div>
+
+
+<%- include('partials/footer'); %>.

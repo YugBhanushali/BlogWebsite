@@ -1,0 +1,14 @@
+<%- include('partials/header'); %>
+
+<h1>Edit Post</h1>
+
+<form action="/posts/editPost/<%= id %>" method="post">
+    <label class="composeTitle">Change Title</label><br>
+    <input class="composeTitle" type="text" name="contentTitle" value="<%= temp.title %>"><br>
+
+    <label class="Post"> Change Post</label><br>
+    <textarea id="composePost" name="composePost" rows="5" cols="151"> <%= temp.contentOfBlog %> </textarea><br>
+    <button type="submit" class="publish">Re-Publish</button>
+</form>
+
+<%- include('partials/footer'); %>
